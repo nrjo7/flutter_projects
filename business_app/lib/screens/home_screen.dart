@@ -1,6 +1,3 @@
-import 'package:business_app/providers/sales_transactions.dart';
-import 'package:business_app/screens/state_screen.dart';
-
 import '/screens/karnataka_screen.dart';
 import '/screens/kerala_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +12,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Map<String, Object>> _pages = [
-    {'page': StateScreen('Kerala'), 'title': 'Sales in Kerala '},
-    {'page': StateScreen('Karnataka'), 'title': 'Sales in Karnataka '}
+    {'page': KeralaScreen(), 'title': 'Sales in Kerala '},
+    {'page': KarnatakaScreen(), 'title': 'Sales in Karnataka '}
   ];
   int _selectedPageIndex = 0;
   void _selectScreen(int index) {
